@@ -1,0 +1,32 @@
+SECURITY ANALYST REPORT
+=======================
+Generated At: 2026-04-17 21:10:04
+Total Samples: 529918
+Detected Attacks: 380
+Normal Traffic: 529538
+Attack Ratio: 0.07%
+Average Model Confidence: 0.9974
+
+Predicted Classes:
+- BENIGN: 529538
+- DDoS: 380
+Approx Accuracy Against Provided Labels: 0.9993
+
+Training Metrics:
+- Split Mode: file_based_split
+- Train Samples: 225745
+- Test Samples: 529918
+- Validation Accuracy: 0.9993
+- Confusion Matrix: [[529538, 380], [0, 0]]
+- Per-Class Metrics:
+  - BENIGN: precision=1.0000, recall=0.9993, f1=0.9996, support=529918
+  - DDoS: precision=0.0000, recall=0.0000, f1=0.0000, support=0
+
+Traffic Pattern Analysis:
+- Total Flows: 529918
+- Average Flow Duration: 10389271.16
+- Top Destination Ports: {53: 214674, 443: 140952, 80: 50834, 123: 5180, 22: 2132, 137: 1522, 389: 1215, 88: 1207, 21: 960, 465: 728}
+
+Detection Rules Simulation:
+- Rule Hits: {'possible_flood_short_duration': 1, 'possible_asymmetric_ddos': 275, 'possible_syn_abuse': 0}
+- Total Rule-Flagged Events: 276
